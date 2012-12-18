@@ -4,11 +4,11 @@ Unit testing uses isolation to test the module so that only its behavior is veri
  
 b.	What is functional testing, how is it implemented, and why is it important?
 
-Functional testing is performed by testing the functional requirements of the software being tested.  The hope of functional testing is that the program physically performs the tasks that it was intended to do and conforms to industry standards.
+Functional testing is performed by testing the functional requirements of the software being tested.  The hope of functional testing is that the program physically performs the tasks that it was intended to do and conforms to industry standards. Functional testing works by feeding user input that validate particualr use cases and then examines the output.
 
 c.	What is the significance and usage of automated unit testing in software development?
 
-Automated unit testing executes tests without manual intervention which provides a low cost re-testing solution that controls risk when code is changed.   This usually results in better stability, portability and efficient interface designs.
+Automated unit testing executes tests without manual intervention which provides a low cost re-testing solution that controls risk when code is changed.   This usually results in better stability, portability and efficient interface designs. This also helps with respect to having a successful build, one would be able to test earlier and more often thus ensure that the code is working properl throughout. Another benefit is that if one makes a change to the code the automated unit testing would determine if the changes caused errors or not.
 
 d.	Where would you commonly find automated unit testing implemented?  Can you find any documentation online that describes this and post a link to it?
 Automated unit testing is useful in test driven environments where the new code needs to pass predefined tests and are run repeatedly until it passes.  http://www.renaissancesoftware.net/files/articles/ESC-241Paper_Grenning-v1r1.pdf
