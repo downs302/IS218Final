@@ -10,10 +10,14 @@ c.	What is the significance and usage of automated unit testing in software deve
 
 Automated unit testing executes tests without manual intervention which provides a low cost re-testing solution that controls risk when code is changed.   This usually results in better stability, portability and efficient interface designs. This also helps with respect to having a successful build, one would be able to test earlier and more often thus ensure that the code is working properl throughout. Another benefit is that if one makes a change to the code the automated unit testing would determine if the changes caused errors or not.
 
-d.	Where would you commonly find automated unit testing implemented?  Can you find any documentation online that describes this and post a link to it?
-Automated unit testing is useful in test driven environments where the new code needs to pass predefined tests and are run repeatedly until it passes.  http://www.renaissancesoftware.net/files/articles/ESC-241Paper_Grenning-v1r1.pdf
+d.	Where would you commonly find automated unit testing implemented?  Can you find any documentation online that describes this and post a link to it? 
+
+Automated unit testing is useful in test driven environments where the new code needs to pass predefined tests and are run repeatedly until it passes. 
+
+ http://www.renaissancesoftware.net/files/articles/ESC-241Paper_Grenning-v1r1.pdf
 
 e.	 What is test driven development and how can it improve the management and quality of software projects.
-This style of development involves the test being written prior to the code that will run the software.  The new code is only accepted after it passes the tests written specifically for it.  Test driven development often reduces regression significantly, improves interface design and makes implementation easier.
+
+This style of development involves the test being written prior to the code that will run the software.  The new code is only accepted after it passes the tests written specifically for it. This helps the programmer meet the detailed specifcations and requirements.  Test driven development often reduces regression significantly, improves interface design and makes implementation easier. Another major benefit is that the code becomes simple, since most bugs in software programming are from complexity. 
 
 
