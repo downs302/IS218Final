@@ -1,6 +1,6 @@
 a.	What is unit testing, how is it implemented, and why is it important?
 
-Unit testing uses isolation to test the module so that only its behavior is verified.  This method is important because it gives the tester a better idea how the module will respond to external conditions by testing it under controlled conditions.  The code should be located in an area easily accessed by developers, either located in the module itself or in a subdirectory of the unit being tested.
+Unit testing uses isolation to test the module so that only its behavior is verified.  This method is important because it gives the tester a better idea how the module will respond to external conditions by testing it under controlled conditions. By preforming this tpye of test one would be able to determine if a particualr module would work with the entire project. Unit tests are implemented in some type of artifical environment in which the mould would be thoroughly tested off of its routines and functions.  The code should be located in an area easily accessed by developers, either located in the module itself or in a subdirectory of the unit being tested.
  
 b.	What is functional testing, how is it implemented, and why is it important?
 
