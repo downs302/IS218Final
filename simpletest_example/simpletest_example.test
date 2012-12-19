@@ -143,4 +143,82 @@ class SimpletestUnitTestExampleTestCase extends DrupalUnitTestCase {
     $message = 'A valid date should return FALSE.';
     $this->assertFalse($result, $message);
   }
+  
+  
+}
+
+
+
+class SimpletestUnitEmailTestCase extends DrupalUnitTestCase {
+
+  public static function getInfo() {
+    return array(
+      'name' => 'Simpletest Example Unit Email',
+      'description' => 'Test that simpletest_example_email_confirmation works properly.',
+      'group' => 'Examples',
+    );
+  }
+
+  function setUp() {
+    drupal_load('module', 'simpletest_example');
+    parent::setUp();
+  }
+
+  /**
+   * Call simpletest_example_email_confirmation and check that it returns correct
+   * result.
+   *
+   * Note that no environment is provided; we're just testing the correct
+   * behavior of a function when passed specific arguments.
+   */
+ 
+  public function testSimpletestUnitTestEmail() {
+    $result = simpletest_example_email_confirmation(NULL);
+    // Note that test assertion messages should never be translated, so
+    // this string is not wrapped in t().
+    $message = 'No email should return TRUE.';
+    $this->assertTrue($result, $message);
+
+    $result = simpletest_example_email_confirmation('email.com');
+    $message = 'An email missing an @ symbol should return TRUE.';
+    $this->assertTrue($result, $message);
+
+    $result = simpletest_example_email_confirmation('email@com');
+    $message = 'An email missing an @ symbol should return TRUE.';
+    $this->assertTrue($result, $message);
+  }
+}
+
+class SimpletestUnitNegPosTestCase extends DrupalUnitTestCase {
+
+  public static function getInfo() {
+    return array(
+      'name' => 'Simpletest Example Unit Negative Positive',
+      'description' => 'Test that simpletest_example_neg_pos works properly.',
+      'group' => 'Examples',
+    );
+  }
+
+  function setUp() {
+    drupal_load('module', 'simpletest_example');
+    parent::setUp();
+  }
+
+  /**
+   * Call simpletest_example_email_confirmation and check that it returns correct
+   * result.
+   *
+   * Note that no environment is provided; we're just testing the correct
+   * behavior of a function when passed specific arguments.
+   */
+ 
+  public function testSimpletestUnitTestNegPos() {
+    $result = simpletest_example_neg_pos(0);
+    // Note that test assertion messages should never be translated, so
+    // this string is not wrapped in t().
+    $message = 'Values not equal to 1 should return FALSE.';
+    $this->assertTrue($result, $message);
+
+
+  }
 }

@@ -127,5 +127,32 @@ function simpletest_example_empty_mysql_date($date_string) {
 }
 
 /**
+ * A simple self-contained function used to demonstrate unit tests.
+ *
+ * @see SimpletestUnitEmailTestCase
+ */
+
+function simpletest_example_email_confirmation($email_string) {
+  if (empty($email_string) || ( preg_match('/[@]/', $email_string) == 0 ) || ( preg_match('/[.]/', $email_string) == 0 )) {
+    return true;
+  }
+  return false;
+}
+
+/**
+ * A simple self-contained function used to demonstrate unit tests.
+ *
+ * @see SimpletestUnitNegPosTestCase
+ */
+
+function simpletest_example_neg_pos($value_string) {
+  if ($value_string == '1') {
+    return true;
+  }
+  return false;
+}
+
+
+/**
  * @} End of "defgroup simpletest_example".
  */
