@@ -169,5 +169,21 @@ function simpletest_example_user_validname($name) {
 
 
 /**
+ * A simple self-contained function used to demonstrate unit tests.
+ *
+ * @see SimpletestUnitTestExampleTestCase
+ */
+function simpletest_example_negative($name) {
+  global $user;
+  if (!strlen($name)) {
+    return t('You must enter a username.');
+  }
+  if (strlen($name) > USERNAME_MAX_LENGTH) {
+    return t('The username %name is too long: it must be %max characters or less.', array('%name' => $name, '%max' => USERNAME_MAX_LENGTH));
+  }  
+}
+
+
+/**
  * @} End of "defgroup simpletest_example".
  */
