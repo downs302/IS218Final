@@ -222,3 +222,40 @@ class SimpletestUnitNegPosTestCase extends DrupalUnitTestCase {
 
   }
 }
+
+class SimpletestUnitNameTestCase extends DrupalUnitTestCase {
+
+  public static function getInfo() {
+    return array(
+      'name' => 'Simpletest Example unit Name',
+      'description' => 'Test that simpletest_user_validname works properly.',
+      'group' => 'Examples',
+    );
+  }
+
+  function setUp() {
+    drupal_load('module', 'simpletest_example');
+    parent::setUp();
+  }
+
+  /**
+   * Call simpletest_example_user_max_name and check that it returns correct
+   * result.
+   *
+   * Note that no environment is provided; we're just testing the correct
+   * behavior of a function when passed specific arguments.
+   */
+  public function testSimpletestUnitTestAccess() {
+    $result = simpletest_example_user_validname(NULL);
+    $message = 'A NULL username should return TRUE.';
+    $this->assertTrue($result, $message);
+    
+    $name = str_repeat ('a', 61);
+    $result = simpletest_example_user_validname($name);
+    $message = 'Too long username should return TRUE.';
+    $this->assertTrue($result, $message);
+
+
+
+  }
+}
